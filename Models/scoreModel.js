@@ -7,6 +7,9 @@ var ScoreSchema = new Schema({
   score:{
       type: Number,
       default: 0
+  },
+  name:{
+    type: String
   }
 });
 
