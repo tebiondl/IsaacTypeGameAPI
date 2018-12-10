@@ -5,7 +5,8 @@ var Schema = mongoose.Schema;
 
 var ScoreSchema = new Schema({
   score:{
-      type: Number
+      type: Number,
+      default: 0
   }
 });
 

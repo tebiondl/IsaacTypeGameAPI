@@ -4,8 +4,13 @@ Score = mongoose.model('Scores');
 
 exports.getAllScores = function(req, res) {
   Score.find({}, function(err, score) {
+
+    score.sort(function(a,b){
+      return b.score - a.score;
+    })
     if (err)
       res.send(err);
+
     res.json(score);
   });
 };
